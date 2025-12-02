@@ -27,8 +27,8 @@ export default function Home() {
       <h1 className="sub-text">I Construct things for the web.</h1>
       <h6 className='col-lg-6 pt-2 pt-lg-3'>I am a <span className='intro'>frontend developer</span> that specializes in building awesome and wonderful interfaces and i also create interactive experiences for people using <span className='intro'>modern web technology.</span></h6>
     </div>
-    <div id='About' className='container m-5 pt-5'>
-      <div className="row mx-2 mx-lg-5 pt-5 px-lg-5">
+    <div id='About' className='container my-5 pt-5'>
+      <div className="row mx-lg-5 pt-5 px-lg-5">
         <div className="col-12 mb-4">
           <Wrapper 
           num={2}
