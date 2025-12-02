@@ -1,0 +1,108 @@
+div.home {
+    margin-top: 6rem;
+}
+div.home .sub-text {
+    color: var(--text-muted);
+}
+.intro {
+    color: var(--accent);
+}
+.home > h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 0;
+}
+.home > h6 {
+    line-height: 1.8rem;
+    font-weight: 400;
+    font-size: 1.15rem;
+}
+.about-line-wrapper {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 1rem;
+}
+.about {
+    font-weight: 700;
+    font-size: 1.5rem;
+
+}
+
+.number {
+    color: var(--accent);
+    margin-right: 1.5rem;
+
+}
+.line {
+    flex: 1;
+    height: 1px;
+    background-color: var(--text-primary);
+}
+
+
+.text {
+    line-height: 1.6rem;
+    font-size: 1.15rem;
+}
+
+.icon {
+    font-size: 1.8rem;
+    color: var(--accent);
+}
+
+.box-item {
+    border: 1px solid var(--accent);
+    padding: 2rem;
+    border-radius: .2rem;
+    box-shadow: var(--shadow);
+    height: 80%;
+}
+ .box-item > p {
+    font-size: 1.15rem;
+}
+
+.extra {
+    display: none;
+}
+
+.show-more-checkbox {
+    display: none;
+}
+
+.show-more-checkbox:checked ~ .extra {
+    display: block;
+    transition: 0.5s ease;
+}
+
+.show-more-label {
+    border: 1px solid var(--accent);
+    padding: 0.5rem;
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--accent);
+    text-align: center;
+    width: fit-content;
+    cursor: pointer;
+    margin: .8rem auto;
+}
+
+.show-more-label::after {
+  content: "Show More";
+}
+
+/* When checked, show “Show Less” */
+.show-more-checkbox:checked ~ .show-more-label::after {
+  content: "Show Less";
+}
+
+
+@media screen and (min-width:768px) {
+    .home > h1 {
+    font-size: 3.2rem;
+    }
+    .home > h6 {
+        line-height: 1.5rem;
+    }
+
+}
