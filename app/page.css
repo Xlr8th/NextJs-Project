@@ -102,8 +102,9 @@ div.home .sub-text {
 }
 
 .project-box {
-    box-shadow: var(--shadow);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
     border-radius: .2rem;
+    padding: 1.2rem 0;
 }
 
 .icon-box {

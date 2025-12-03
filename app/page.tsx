@@ -28,7 +28,7 @@ export function Wrapper ({num, text} :WrapperProps) {
 
 export function Project ({title, mainText, smallText} :ProjectProps) {
   return (
-    <div className="col project-box me-3">
+    <div className="col project-box">
       <div className='row text-end m-3 p-2'>
         <div className='col-2'><FaFolder className='icon'/></div>
         <div className='col-8'><a className='icon-box' href="#"><SiGithub className='icon'/></a></div>
@@ -147,7 +147,7 @@ export default function Home() {
           />
         </div>
       </div>
-      <div className="row g-2 my-5">
+      <div className="row row-cols-1 row-cols-md-3 g-4 my-5">
         <Project
         title='Spink Ecommerce'
         mainText='An ecommerce website that deals inn mobile gadgets'
