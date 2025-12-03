@@ -85,6 +85,7 @@ div.home .sub-text {
     width: fit-content;
     cursor: pointer;
     margin: .8rem auto;
+    transition: all 0.25s;
 }
 
 .show-more-label::after {
@@ -95,6 +96,34 @@ div.home .sub-text {
 .show-more-checkbox:checked ~ .show-more-label::after {
   content: "Show Less";
 }
+
+.show-more-label:hover {
+    border: 1px solid var(--line);
+}
+
+.project-box {
+    box-shadow: var(--shadow);
+    border-radius: .2rem;
+}
+
+.icon-box {
+    padding: 1rem .8rem ;
+}
+.project-box h3 {
+    color: var(--text-primary);
+    font-weight: 700;
+    font-size: 1.2rem;
+    
+}
+.project-box p > small {
+    color: var(--text-muted);
+}
+
+.icon-box:hover {
+    background-color:var(--btn-bg-hover);
+    border-radius: 0.5rem;
+}
+
 
 
 @media screen and (min-width:768px) {

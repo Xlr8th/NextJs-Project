@@ -1,9 +1,17 @@
 import './page.css';
-import { SiJavascript, SiHtml5, SiCss3, SiNextdotjs, SiBootstrap, SiReact } from 'react-icons/si';
+import { SiJavascript, SiHtml5, SiCss3, SiNextdotjs, SiBootstrap, SiReact, SiGithub } from 'react-icons/si';
+import { FaFolder } from "react-icons/fa";
+import { FiSend } from "react-icons/fi";
 
 interface WrapperProps {
   num: number;
   text: string;
+}
+
+interface ProjectProps {  
+  title: string;
+  smallText: string;
+  mainText: string;
 }
 
 export function Wrapper ({num, text} :WrapperProps) {
@@ -15,6 +23,23 @@ export function Wrapper ({num, text} :WrapperProps) {
     </div>
     <div className='line'></div>
   </div>
+  )
+}
+
+export function Project ({title, mainText, smallText} :ProjectProps) {
+  return (
+    <div className="col project-box me-3">
+      <div className='row text-end m-3 p-2'>
+        <div className='col-2'><FaFolder className='icon'/></div>
+        <div className='col-8'><a className='icon-box' href="#"><SiGithub className='icon'/></a></div>
+        <div className='col-2'><a className='icon-box' href="#"><FiSend className='icon'/></a></div>
+      </div>
+      <h3 className='ms-3 ps-2'>{title}</h3>
+      <p className='ms-3 ps-2'>{mainText}</p>
+      <p className='ms-3 ps-2'>
+        <small>{smallText}</small>
+      </p>
+    </div>
   )
 }
 
@@ -112,6 +137,33 @@ export default function Home() {
         
       </div>
 
+    </div>
+    <div className="container">
+      <div className="row">
+        <div className="col-12 mb-4">
+          <Wrapper 
+          num={3}
+          text={`Projects`}
+          />
+        </div>
+      </div>
+      <div className="row g-2 my-5">
+        <Project
+        title='Spink Ecommerce'
+        mainText='An ecommerce website that deals inn mobile gadgets'
+        smallText='React + Styled Components' 
+        />
+        <Project
+        title='Spink Blog'
+        mainText='A blog site that offers information in various categories.'
+        smallText='Next + MUI' 
+        />
+        <Project
+        title='GoldenLand'
+        mainText='A real estate website'
+        smallText='Html + Css + Javascript' 
+        />
+      </div>
     </div>
     </>
   );
