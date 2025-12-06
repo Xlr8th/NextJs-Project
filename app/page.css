@@ -102,9 +102,11 @@ div.home .sub-text {
 }
 
 .project-box {
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
     border-radius: .2rem;
     padding: 1.2rem 0;
+    height: 100%;
+    background-color: var(--bg-project);
 }
 
 .icon-box {
@@ -123,6 +125,50 @@ div.home .sub-text {
 .icon-box:hover {
     background-color:var(--btn-bg-hover);
     border-radius: 0.5rem;
+}
+
+.extra-project {
+    display: none;
+}
+
+.show-more-checkbox-project {
+    display: none;
+}
+
+.show-more-checkbox-project:checked ~ .extra-project {
+    display: block;
+    transition: 0.5s ease;
+}
+
+.show-more-label-project {
+    border: 1px solid var(--accent);
+    padding: 0.5rem;
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--accent);
+    text-align: center;
+    width: fit-content;
+    cursor: pointer;
+    margin: .8rem auto;
+    transition: all 0.25s;
+}
+
+.show-more-label-project::after {
+  content: "Show More";
+}
+
+/* When checked, show “Show Less” */
+.show-more-checkbox-project:checked ~ .show-more-label-project::after {
+  content: "Show Less";
+}
+
+.show-more-label-project:hover {
+    border: 1px solid var(--line);
+}
+
+.auto-margin {
+    margin: 10px auto;
+    font-size: 1.1rem;
 }
 
 

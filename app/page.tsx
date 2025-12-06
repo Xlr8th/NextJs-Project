@@ -28,7 +28,7 @@ export function Wrapper ({num, text} :WrapperProps) {
 
 export function Project ({title, mainText, smallText} :ProjectProps) {
   return (
-    <div className="col project-box">
+    <div className="project-box">
       <div className='row text-end m-3 p-2'>
         <div className='col-2'><FaFolder className='icon'/></div>
         <div className='col-8'><a className='icon-box' href="#"><SiGithub className='icon'/></a></div>
@@ -47,12 +47,12 @@ export default function Home() {
   return (
     <>
     <div className="home container p-2 px-lg-5">
-      <h6 className='intro pt-3'>Hi, my name is</h6>
+      <h6 className='intro pt-5'>Hi, my name is</h6>
       <h1 className="">George Oluwatobiloba</h1>
       <h1 className="sub-text">I Construct things for the web.</h1>
       <h6 className='col-lg-6 pt-2 pt-lg-3'>I am a <span className='intro'>frontend developer</span> that specializes in building awesome and wonderful interfaces and i also create interactive experiences for people using <span className='intro'>modern web technology.</span></h6>
     </div>
-    <div id='About' className='container my-5 pt-5'>
+    <div id='About' className='container my-5 pt-3'>
       <div className="row mx-lg-5 pt-5 px-lg-5">
         <div className="col-12 mb-4">
           <Wrapper 
@@ -74,7 +74,8 @@ export default function Home() {
         </div>
       </div>
     </div>
-    <div id='Skills' className='container mt-5 pt-5'>
+
+    <div id='Skills' className='container mt-5 pt-3'>
       <div className="row mb-4 pt-5 px-lg-5">
         <div className="col-12">
           <Wrapper 
@@ -138,31 +139,87 @@ export default function Home() {
       </div>
 
     </div>
-    <div className="container">
+    <div className="container pt-5 mt-3">
       <div className="row">
         <div className="col-12 mb-4">
           <Wrapper 
-          num={3}
+          num={4}
           text={`Projects`}
           />
         </div>
       </div>
-      <div className="row row-cols-1 row-cols-md-3 g-4 my-5">
-        <Project
-        title='Spink Ecommerce'
-        mainText='An ecommerce website that deals inn mobile gadgets'
-        smallText='React + Styled Components' 
-        />
-        <Project
-        title='Spink Blog'
-        mainText='A blog site that offers information in various categories.'
-        smallText='Next + MUI' 
-        />
-        <Project
-        title='GoldenLand'
-        mainText='A real estate website'
-        smallText='Html + Css + Javascript' 
-        />
+      <div className="row g-3 row-cols-1 row-cols-md-3 my-5">
+        <div className="col">
+          <Project
+          title='Spink Ecommerce'
+          mainText='An ecommerce website that deals inn mobile gadgets'
+          smallText='React + Styled Components' 
+          />
+        </div>
+
+        <div className="col">
+          <Project
+          title='Spink Blog'
+          mainText='A blog site that offers information in various categories.'
+          smallText='Next + MUI' 
+          />
+        </div>
+        <div className="col">
+          <Project
+          title='GoldenLand'
+          mainText='A real estate website'
+          smallText='Html + Css + Javascript' 
+          />
+        </div>
+
+        <input type="checkbox" id='show-more-project' className='show-more-checkbox-project' />
+
+        <div className="col extra-project">
+          <Project
+          title='Spink-Learn'
+          mainText='A Learning Management System'
+          smallText='React + Styled Components' 
+          />
+        </div> 
+        <div className="col extra-project">
+          <Project
+          title='Portfolio'
+          mainText='My portfolio website which contains my projects and other information about me'
+          smallText='React + MUI' 
+          />
+        </div> 
+        <div className="col extra-project">
+          <Project
+          title='Portfolio V2'
+          mainText='My portfolio website which contains my projects and other information about me'
+          smallText='React + MUI + Styled Components' 
+          />
+        </div>
+
+        <label htmlFor="show-more-project" className='show-more-label-project rounded'></label>         
+        
+      </div>
+    </div>
+    <div className="container mt-5 pt-5">
+      <div className="row">
+        <div className="col-12 mb-4">
+          <Wrapper 
+          num={5}
+          text={`Satisfied?`}
+          />
+        </div>
+        <div>
+          
+        </div>
+        <div className="text-center ">
+          <h1 className='fw-bold'>
+            Get in Touch
+          </h1>
+          <p className='w-50 auto-margin '>
+            I am currently looking for job opportunities. Very much available if you want to hire me or ask me any questions concerning any of my projects or collaborations.
+          </p>
+        </div>
+
       </div>
     </div>
     </>

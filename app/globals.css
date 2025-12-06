@@ -3,7 +3,8 @@
 :root {
   /* Backgrounds */
   --bg-primary: #0f2a48;
-  --bg-nav: rgba(15, 42, 72, 0.96);      
+  --bg-nav: rgba(15, 42, 72, 0.96);
+  --bg-project: rgba(17, 47, 81, 0.874);     
 
   /* Text Colors */   
   --text-primary: #aed1f6;       
