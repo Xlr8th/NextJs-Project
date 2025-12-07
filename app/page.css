@@ -62,11 +62,7 @@ div.home .sub-text {
     font-size: 1.15rem;
 }
 
-.extra {
-    display: none;
-}
-
-.show-more-checkbox {
+.show-more-checkbox, .extra {
     display: none;
 }
 
@@ -75,7 +71,7 @@ div.home .sub-text {
     transition: 0.5s ease;
 }
 
-.show-more-label {
+.show-more-label, .show-more-label-project, .resume {
     border: 1px solid var(--accent);
     padding: 0.5rem;
     font-size: 1rem;
@@ -127,30 +123,13 @@ div.home .sub-text {
     border-radius: 0.5rem;
 }
 
-.extra-project {
-    display: none;
-}
-
-.show-more-checkbox-project {
+.show-more-checkbox-project, .extra-project {
     display: none;
 }
 
 .show-more-checkbox-project:checked ~ .extra-project {
     display: block;
     transition: 0.5s ease;
-}
-
-.show-more-label-project {
-    border: 1px solid var(--accent);
-    padding: 0.5rem;
-    font-size: 1rem;
-    font-weight: 500;
-    color: var(--accent);
-    text-align: center;
-    width: fit-content;
-    cursor: pointer;
-    margin: .8rem auto;
-    transition: all 0.25s;
 }
 
 .show-more-label-project::after {
@@ -170,6 +149,56 @@ div.home .sub-text {
     margin: 10px auto;
     font-size: 1.1rem;
 }
+.hire-label {
+    padding: 0.5rem;
+    background-color: #156ac4;
+    font-size: 1rem;
+    font-weight: 500;
+    color: white;
+    text-align: center;
+    width: fit-content;
+    cursor: pointer;
+    margin: .8rem auto;
+    transition: all 0.25s;
+}
+
+.checkbox-hire, .hire-extra {
+    display: none;
+}
+
+.checkbox-hire:checked ~ .hire-extra {
+    display: block;
+    transition: all 0.5s ease;
+}
+
+.resume-hire {
+    border: 1px solid var(--line);
+    padding: 0.5rem;
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--accent);
+    text-align: center;
+    width: fit-content;
+    cursor: pointer;
+    margin: .8rem auto;
+    transition: all 0.25s;
+}
+
+.hire-number {
+    color: var(--accent);
+    font-size: 1.1rem;
+    transition:all 0.5s ease;
+}
+footer > small {
+    color: var(--accent);
+}
+.icon-footer {
+    font-size: 1rem;
+    margin:0  1rem;
+    color: var(--accent);
+}
+
+
 
 
 

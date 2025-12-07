@@ -1,5 +1,5 @@
 import './page.css';
-import { SiJavascript, SiHtml5, SiCss3, SiNextdotjs, SiBootstrap, SiReact, SiGithub } from 'react-icons/si';
+import { SiJavascript, SiHtml5, SiCss3, SiNextdotjs, SiBootstrap, SiReact, SiGithub, SiFacebook, SiX, SiLinkedin } from 'react-icons/si';
 import { FaFolder } from "react-icons/fa";
 import { FiSend } from "react-icons/fi";
 
@@ -139,7 +139,7 @@ export default function Home() {
       </div>
 
     </div>
-    <div className="container pt-5 mt-3">
+    <div id='project' className="container pt-5 mt-3">
       <div className="row">
         <div className="col-12 mb-4">
           <Wrapper 
@@ -200,16 +200,13 @@ export default function Home() {
         
       </div>
     </div>
-    <div className="container mt-5 pt-5">
+    <div id='contact' className="container my-5 pt-5">
       <div className="row">
         <div className="col-12 mb-4">
           <Wrapper 
           num={5}
           text={`Satisfied?`}
           />
-        </div>
-        <div>
-          
         </div>
         <div className="text-center ">
           <h1 className='fw-bold'>
@@ -219,9 +216,36 @@ export default function Home() {
             I am currently looking for job opportunities. Very much available if you want to hire me or ask me any questions concerning any of my projects or collaborations.
           </p>
         </div>
+        <div className='text-center'>
+          
+          <a className='resume text-decoration-none rounded me-3' href="https://drive.google.com/uc?export=download&id=1vp5FQQcP0ZFreCtgtbXKqzH8IGNpR_Ze" download>
+          Resume
+          </a>
+          
+          <label htmlFor="hire-me" className='hire-label rounded'> Hire me</label>
+          <input type="checkbox" id='hire-me' className='checkbox-hire' />
+          <div className='hire-extra my-2'>
+            <a className='resume-hire text-decoration-none rounded' href="mailto:saintgeorge.001@gmail.com">saintgeorge.001@gmail.com</a>
+          </div>
+          <div className='hire-extra'>
+            <a className='text-decoration-none hire-number' href="tel:+2348060669825">+234 806 066 9825</a>
+          </div>         
+
+        </div>
 
       </div>
     </div>
+
+    <footer className='text-center mb-1'>
+      <small> © Copyright Georige 2025 </small>
+      <div>
+        <SiGithub className='icon-footer'/>
+        <SiFacebook className='icon-footer'/>
+        <SiX className='icon-footer'/>
+        <SiLinkedin className='icon-footer'/>
+      </div>
+      
+    </footer>
     </>
   );
 }

@@ -25,8 +25,8 @@ const RootLayout = ({ children }: {children: ReactNode}) => {
                 <li><Link className='nav-item' href='/'>Home</Link></li>
                 <li><Link className='nav-item' href='#About'>About</Link></li>
                 <li><Link className='nav-item' href='#Skills'>Skills</Link></li>
-                <li><Link className='nav-item' href='#Project'>Project</Link></li>
-                <li><Link className='nav-item' href='/Contact'>Contact</Link></li>
+                <li><Link className='nav-item' href='#project'>Project</Link></li>
+                <li><Link className='nav-item' href='#contact'>Contact</Link></li>
               </ul>
               <Link href='/' className='text-decoration-none logo-link ms-3 d-lg-none'><h1 className='logo'>GEORIGE</h1></Link>
             </nav>
