@@ -212,7 +212,7 @@ export default function Home() {
           <h1 className='fw-bold'>
             Get in Touch
           </h1>
-          <p className='w-50 auto-margin '>
+          <p className=' w-75 auto-margin '>
             I am currently looking for job opportunities. Very much available if you want to hire me or ask me any questions concerning any of my projects or collaborations.
           </p>
         </div>
