@@ -134,15 +134,18 @@ div.home .sub-text {
 
 .show-more-label-project::after {
   content: "Show More";
+  transition: 0.5s ease;
 }
 
 /* When checked, show “Show Less” */
 .show-more-checkbox-project:checked ~ .show-more-label-project::after {
   content: "Show Less";
+  transition: 0.5s ease;
 }
 
 .show-more-label-project:hover {
     border: 1px solid var(--line);
+    transition: 0.5s ease;
 }
 
 .auto-margin {
@@ -159,16 +162,27 @@ div.home .sub-text {
     width: fit-content;
     cursor: pointer;
     margin: .8rem auto;
-    transition: all 0.25s;
+    transition: 0.5s ease;
 }
 
-.checkbox-hire, .hire-extra {
+.checkbox-hire {
     display: none;
 }
 
-.checkbox-hire:checked ~ .hire-extra {
-    display: block;
+.hire-extra {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%) translateY(-10px);
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
     transition: all 0.5s ease;
+}
+
+.checkbox-hire:checked ~ .hire-extra {
+    max-height: 200px;
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
 }
 
 .resume-hire {
@@ -181,7 +195,8 @@ div.home .sub-text {
     width: fit-content;
     cursor: pointer;
     margin: .8rem auto;
-    transition: all 0.25s;
+    transition: 0.5s ease;
+    display: inline-block;
 }
 
 .hire-number {

@@ -46,36 +46,42 @@ export function Project ({title, mainText, smallText} :ProjectProps) {
 export default function Home() {
   return (
     <>
-    <div className="home container p-2 px-lg-5">
-      <h6 className='intro pt-5'>Hi, my name is</h6>
-      <h1 className="">George Oluwatobiloba</h1>
-      <h1 className="sub-text">I Construct things for the web.</h1>
-      <h6 className='col-lg-6 pt-2 pt-lg-3'>I am a <span className='intro'>frontend developer</span> that specializes in building awesome and wonderful interfaces and i also create interactive experiences for people using <span className='intro'>modern web technology.</span></h6>
-    </div>
-    <div id='About' className='container my-5 pt-3'>
-      <div className="row mx-lg-5 pt-5 px-lg-5">
-        <div className="col-12 mb-4">
-          <Wrapper 
-          num={2}
-          text={`About Me`}
-          />
-        </div>
-        <div className="col-12">
-          <div className="about-img-wrapper row gx-5">
-            <div className='col-lg-8'>
-              <p className='text'>
-                I am a self motivated individual who is able to work in a busy environment and produce high standards of work. I am an excellent team worker and build up good working relationships with my colleagues. I am flexible, reliable and adaptive to all challenging situations. I am able to work well both in a team environment as well as using own initiative. I love challenges. I like to tackle problems on my own first before seeking help.
-              </p>
-            </div>
-            <div className='col-lg-4 mt-2'>
-              <img className='profile img-fluid rounded' src="profile.jpg" alt="Profile" />
-            </div>
-          </div>        
+    <section id='home' className='pt-5'>
+      <div className="home container pb-5 px-lg-5" data-aos='zoom-in'>
+        <h6 className='intro pt-5'>Hi, my name is</h6>
+        <h1 className="">George Oluwatobiloba</h1>
+        <h1 className="sub-text">I Construct things for the web.</h1>
+        <h6 className='col-lg-6 pt-2 pt-lg-3'>I am a <span className='intro'>frontend developer</span> that specializes in building awesome and wonderful interfaces and i also create interactive experiences for people using <span className='intro'>modern web technology.</span></h6>
+      </div>
+    </section>
+    
+    <section id='About' className='pt-5'>
+      <div className='container my-5' data-aos="fade-up">
+        <div className="row mx-lg-5 pt-5 px-lg-5">
+          <div className="col-12 mb-4">
+            <Wrapper 
+            num={2}
+            text={`About Me`}
+            />
+          </div>
+          <div className="col-12">
+            <div className="about-img-wrapper row gx-5">
+              <div className='col-lg-8'>
+                <p className='text'>
+                  I am a self motivated individual who is able to work in a busy environment and produce high standards of work. I am an excellent team worker and build up good working relationships with my colleagues. I am flexible, reliable and adaptive to all challenging situations. I am able to work well both in a team environment as well as using own initiative. I love challenges. I like to tackle problems on my own first before seeking help.
+                </p>
+              </div>
+              <div className='col-lg-4 mt-2'>
+                <img className='profile img-fluid rounded' src="profile.jpg" alt="Profile" />
+              </div>
+            </div>        
+          </div>
         </div>
       </div>
-    </div>
+    </section>
 
-    <div id='Skills' className='container mt-5 pt-3'>
+    <section id='Skills' className='pt-5'>
+      <div className='container mt-5'data-aos="fade-up" data-aos-delay="500">
       <div className="row mb-4 pt-5 px-lg-5">
         <div className="col-12">
           <Wrapper 
@@ -138,105 +144,117 @@ export default function Home() {
         
       </div>
 
-    </div>
-    <div id='project' className="container pt-5 mt-3">
-      <div className="row">
-        <div className="col-12 mb-4">
-          <Wrapper 
-          num={4}
-          text={`Projects`}
-          />
-        </div>
       </div>
-      <div className="row g-3 row-cols-1 row-cols-md-3 my-5">
-        <div className="col">
-          <Project
-          title='Spink Ecommerce'
-          mainText='An ecommerce website that deals inn mobile gadgets'
-          smallText='React + Styled Components' 
-          />
-        </div>
+    </section>
 
-        <div className="col">
-          <Project
-          title='Spink Blog'
-          mainText='A blog site that offers information in various categories.'
-          smallText='Next + MUI' 
-          />
-        </div>
-        <div className="col">
-          <Project
-          title='GoldenLand'
-          mainText='A real estate website'
-          smallText='Html + Css + Javascript' 
-          />
-        </div>
-
-        <input type="checkbox" id='show-more-project' className='show-more-checkbox-project' />
-
-        <div className="col extra-project">
-          <Project
-          title='Spink-Learn'
-          mainText='A Learning Management System'
-          smallText='React + Styled Components' 
-          />
-        </div> 
-        <div className="col extra-project">
-          <Project
-          title='Portfolio'
-          mainText='My portfolio website which contains my projects and other information about me'
-          smallText='React + MUI' 
-          />
-        </div> 
-        <div className="col extra-project">
-          <Project
-          title='Portfolio V2'
-          mainText='My portfolio website which contains my projects and other information about me'
-          smallText='React + MUI + Styled Components' 
-          />
-        </div>
-
-        <label htmlFor="show-more-project" className='show-more-label-project rounded'></label>         
-        
-      </div>
-    </div>
-    <div id='contact' className="container my-5 pt-5">
-      <div className="row">
-        <div className="col-12 mb-4">
-          <Wrapper 
-          num={5}
-          text={`Satisfied?`}
-          />
-        </div>
-        <div className="text-center ">
-          <h1 className='fw-bold'>
-            Get in Touch
-          </h1>
-          <p className=' w-75 auto-margin '>
-            I am currently looking for job opportunities. Very much available if you want to hire me or ask me any questions concerning any of my projects or collaborations.
-          </p>
-        </div>
-        <div className='text-center'>
-          
-          <a className='resume text-decoration-none rounded me-3' href="https://drive.google.com/uc?export=download&id=1vp5FQQcP0ZFreCtgtbXKqzH8IGNpR_Ze" download>
-          Resume
-          </a>
-          
-          <label htmlFor="hire-me" className='hire-label rounded'> Hire me</label>
-          <input type="checkbox" id='hire-me' className='checkbox-hire' />
-          <div className='hire-extra my-2'>
-            <a className='resume-hire text-decoration-none rounded' href="mailto:saintgeorge.001@gmail.com">saintgeorge.001@gmail.com</a>
+    <section id='project' className='pt-5'>
+      <div  className="container mt-5" data-aos="fade-up">
+        <div className="row">
+          <div className="col-12 mb-4">
+            <Wrapper 
+            num={4}
+            text={`Projects`}
+            />
           </div>
-          <div className='hire-extra'>
-            <a className='text-decoration-none hire-number' href="tel:+2348060669825">+234 806 066 9825</a>
-          </div>         
+        </div>
+        <div className="row g-3 row-cols-1 row-cols-md-3 my-5">
+          <div className="col">
+            <Project
+            title='Spink Ecommerce'
+            mainText='An ecommerce website that deals inn mobile gadgets'
+            smallText='React + Styled Components' 
+            />
+          </div>
+
+          <div className="col">
+            <Project
+            title='Spink Blog'
+            mainText='A blog site that offers information in various categories.'
+            smallText='Next + MUI' 
+            />
+          </div>
+          <div className="col">
+            <Project
+            title='GoldenLand'
+            mainText='A real estate website'
+            smallText='Html + Css + Javascript' 
+            />
+          </div>
+
+          <input type="checkbox" id='show-more-project' className='show-more-checkbox-project' />
+
+          <div className="col extra-project">
+            <Project
+            title='Spink-Learn'
+            mainText='A Learning Management System'
+            smallText='React + Styled Components' 
+            />
+          </div> 
+          <div className="col extra-project">
+            <Project
+            title='Portfolio'
+            mainText='My portfolio website which contains my projects and other information about me'
+            smallText='React + MUI' 
+            />
+          </div> 
+          <div className="col extra-project">
+            <Project
+            title='Portfolio V2'
+            mainText='My portfolio website which contains my projects and other information about me'
+            smallText='React + MUI + Styled Components' 
+            />
+          </div>
+
+          <label htmlFor="show-more-project" className='show-more-label-project rounded'></label>         
+          
+        </div>
+      </div>
+    </section>
+
+    <section id='contact' className='pt-5'>
+      <div  className="container my-5 pb-5" data-aos="fade-up">
+        <div className="row mb-5">
+          <div className="col-12 mb-4">
+            <Wrapper 
+            num={5}
+            text={`Satisfied?`}
+            />
+          </div>
+          <div className="text-center ">
+            <h1 className='fw-bold'>
+              Get in Touch
+            </h1>
+            <p className=' w-75 auto-margin '>
+              I am currently looking for job opportunities. Very much available if you want to hire me or ask me any questions concerning any of my projects or collaborations.
+            </p>
+          </div>
+          <div className='text-center position-relative'>
+            
+            <a className='resume text-decoration-none rounded me-3' href="https://drive.google.com/uc?export=download&id=1vp5FQQcP0ZFreCtgtbXKqzH8IGNpR_Ze" download>
+            Resume
+            </a>
+            
+            <label htmlFor="hire-me" className='hire-label rounded'> Hire me</label>
+            <input type="checkbox" id='hire-me' className='checkbox-hire' />
+            <div className='hire-extra'>
+              <a className='resume-hire text-decoration-none rounded' href="mailto:saintgeorge.001@gmail.com">saintgeorge.001@gmail.com</a>
+              <div>
+                <a className='text-decoration-none hire-number' href="tel:+2348060669825">
+                  +234 806 066 9825
+                </a>
+              </div>
+            </div>
+                     
+
+          </div>
 
         </div>
-
       </div>
-    </div>
+    </section>
+    
+    
 
-    <footer className='text-center mb-1'>
+    <footer className='text-center mt-2 pt-5 mb-3'>
       <small> © Copyright Georige 2025 </small>
       <div>
         <SiGithub className='icon-footer'/>

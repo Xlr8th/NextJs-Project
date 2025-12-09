@@ -1,32 +1,23 @@
 @import "bootstrap/dist/css/bootstrap.min.css";
 
 :root {
-  /* Backgrounds */
   --bg-primary: #0f2a48;
   --bg-nav: rgba(15, 42, 72, 0.96);
-  --bg-project: rgba(17, 47, 81, 0.874);     
-
-  /* Text Colors */   
+  --bg-project: rgba(17, 47, 81, 0.874);  
   --text-primary: #aed1f6;       
-  --text-muted: #7389a1;      
-
-  /* Accent Colors */
+  --text-muted: #7389a1;
   --accent: #01ffc4;
-
-  /* Lines / Borders */
-  --line: #194c86;           
-
-  /* Shadows */
-  --shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
-
-  /* Buttons  */
+  --line: #194c86;
+  --shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+  --bg-shadow: 0 8px 10px rgba(0, 0, 0, 0.4);
   --btn-bg-hover: #132f52;
 }
 
 body {
   background: var(--bg-primary);
   color: var(--text-primary);
-  font-family: 'roboto', 'poppins', 'montserrat', ;
+  font-family: 'roboto', 'poppins', 'montserrat';
+  overflow-x: hidden;
 }
 
 header {
@@ -37,27 +28,29 @@ header {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  background-color: var(--bg-nav);
   height: 80px;
-  box-shadow:var(--shadow);
+  background-color: var(--bg-nav);
   width: 100%;
+  z-index: 99;
 }
 
 nav.main-menu {
   position: absolute;
-  top: 90px;
-  left: 2.5vw;
-  background-color: var(--bg-primary);
+  top: 60px;
+  left: 0;
+  background-color: var(--bg-nav);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border-radius: 1rem;
-  width: 95%;
-  box-shadow: var(--shadow);
+  border-radius: .1rem;
+  width: 50%;
+  height: 100vh;
+  box-shadow: var(--bg-shadow);
   margin: 5px auto;
   transition: 0.5 ease all;
   display: none;
+  z-index: 98;
 }
 
 
@@ -81,24 +74,28 @@ nav.main-menu ul li {
   text-decoration: none;
   padding: 10px;
   border-radius: 0.3rem;
-  font-weight: 400;
+  font-weight: 500;
   font-size: 1rem;
   transition: all 0.3s;
   text-align: center;
   margin: 10px 0;
 }
 
-  .nav-item:hover {
-    background-color:var(--btn-bg-hover);
-    border-radius: 0.5rem;
-  }
+.nav-item:hover {
+  background-color:var(--btn-bg-hover);
+  border-radius: 0.5rem;
+}
 
+.nav-item > span {
+  color: var(--accent);
+}
 .logo {
   font-size: 0.8rem;
   color: var(--accent);
   border-radius: 5px;
   padding: 10px;
-  width: fit-content;
+  width: 75%;
+  text-align: center;
   border: 1px solid var(--accent);
   transition: all 0.3s;
   margin-left: 2rem;
@@ -157,6 +154,9 @@ nav.main-menu ul li {
 }
 
 @media screen and (min-width:992px) {
+  header {
+    box-shadow: var(--shadow);
+  }
 
   .logo {
   font-size: 0.8rem;
@@ -212,6 +212,3 @@ nav.main-menu ul li {
     display: none;
   }
 }
-
-
-
