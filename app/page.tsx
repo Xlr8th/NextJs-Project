@@ -143,7 +143,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="col-md-6 extra">
+        <div className="col-12 extra">
           <h5>Bootstrap <SiBootstrap className='icon'/></h5>
           <div className='box-item'>
             <p>
@@ -152,7 +152,7 @@ export default function Home() {
           </div>
         </div>
 
-        <label htmlFor="show-more" className='show-more-label rounded'></label>
+        <label htmlFor="show-more" className='show-more-label rounded mt-md-3'></label>
         
       </div>
 
