@@ -135,7 +135,7 @@ export default function Home() {
         </div>
 
         <div className="col-md-6 extra">
-          <h5>Bootstrap <SiVite className='icon'/></h5>
+          <h5>Vite <SiVite className='icon'/></h5>
           <div className='box-item'>
             <p>
               Vite is a modern frontend build tool that provides fast development and optimized production builds using native ES modules.
@@ -173,7 +173,7 @@ export default function Home() {
           <div className="col">
             <Project
             title='SOL Nonprofit website'
-            mainText='An Nonprofit website where people learn about the organization and determine if they want to support'
+            mainText='A nonprofit website that helps people learn about the organization and get involved.'
             smallText='React + Vite'
             githubLink='https://github.com/Xlr8th/react_app'
             siteLink='https://xlr8th.github.io/react_app/' 
@@ -189,10 +189,11 @@ export default function Home() {
             siteLink='https://hazel-chestnut.vercel.app/'
             />
           </div>
+
           <div className="col">
             <Project
             title='Springs of Life'
-            mainText='A Mission Organization website'
+            mainText='A Nonprofite website that educates visitors about the organization and encourages meaningful support.'
             smallText='Html + Css + Javascript'
             githubLink='https://github.com/Xlr8th/SpringsOfLifeWebsite'
             siteLink='https://solmissions.org/'
@@ -200,6 +201,16 @@ export default function Home() {
           </div>
 
           <input type="checkbox" id='show-more-project' className='show-more-checkbox-project' />
+
+          <div className="col extra-project">
+            <Project
+            title='Project Portfolio'
+            mainText='My portfolio website which contains my projects and other information about me'
+            smallText='Nextjs + Bootstrap'
+            githubLink='https://github.com/Xlr8th/NextJs-Project'
+            siteLink='https://next-js-project-er5c.vercel.app/'
+            />
+          </div>
 
           <div className="col extra-project">
             <Project
@@ -219,15 +230,6 @@ export default function Home() {
             siteLink='https://xlr8th.github.io/portfolio-website/'
             />
           </div> 
-          <div className="col extra-project">
-            <Project
-            title='Portfolio V2'
-            mainText='My portfolio website which contains my projects and other information about me'
-            smallText='Nextjs + Bootstrap'
-            githubLink='https://github.com/Xlr8th/NextJs-Project'
-            siteLink='https://next-js-project-er5c.vercel.app/'
-            />
-          </div>
 
           <label htmlFor="show-more-project" className='show-more-label-project rounded'></label>         
           
