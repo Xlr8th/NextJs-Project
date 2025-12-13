@@ -1,5 +1,5 @@
 import './page.css';
-import { SiJavascript, SiHtml5, SiCss3, SiNextdotjs, SiBootstrap, SiReact, SiGithub, SiFacebook, SiX, SiLinkedin } from 'react-icons/si';
+import { SiJavascript, SiHtml5, SiCss3, SiNextdotjs, SiBootstrap, SiReact, SiGithub, SiFacebook, SiX, SiLinkedin, SiVite } from 'react-icons/si';
 import { FaFolder } from "react-icons/fa";
 import { FiSend } from "react-icons/fi";
 
@@ -12,6 +12,8 @@ interface ProjectProps {
   title: string;
   smallText: string;
   mainText: string;
+  githubLink: string;
+  siteLink: string;
 }
 
 export function Wrapper ({num, text} :WrapperProps) {
@@ -26,13 +28,13 @@ export function Wrapper ({num, text} :WrapperProps) {
   )
 }
 
-export function Project ({title, mainText, smallText} :ProjectProps) {
+export function Project ({title, mainText, smallText, githubLink, siteLink} :ProjectProps) {
   return (
     <div className="project-box">
       <div className='row text-end m-3 p-2'>
         <div className='col-2'><FaFolder className='icon'/></div>
-        <div className='col-8'><a className='icon-box' href="#"><SiGithub className='icon'/></a></div>
-        <div className='col-2'><a className='icon-box' href="#"><FiSend className='icon'/></a></div>
+        <div className='col-8'><a className='icon-box' href={githubLink}><SiGithub className='icon'/></a></div>
+        <div className='col-2'><a className='icon-box' href={siteLink}><FiSend className='icon'/></a></div>
       </div>
       <h3 className='ms-3 ps-2'>{title}</h3>
       <p className='ms-3 ps-2'>{mainText}</p>
@@ -131,6 +133,16 @@ export default function Home() {
             </p>
           </div>
         </div>
+
+        <div className="col-md-6 extra">
+          <h5>Bootstrap <SiVite className='icon'/></h5>
+          <div className='box-item'>
+            <p>
+              Vite is a modern frontend build tool that provides fast development and optimized production builds using native ES modules.
+            </p>
+          </div>
+        </div>
+
         <div className="col-md-6 extra">
           <h5>Bootstrap <SiBootstrap className='icon'/></h5>
           <div className='box-item'>
@@ -160,24 +172,30 @@ export default function Home() {
         <div className="row g-3 row-cols-1 row-cols-md-3 my-5">
           <div className="col">
             <Project
-            title='Spink Ecommerce'
-            mainText='An ecommerce website that deals inn mobile gadgets'
-            smallText='React + Styled Components' 
+            title='SOL Nonprofit website'
+            mainText='An Nonprofit website where people learn about the organization and determine if they want to support'
+            smallText='React + Vite'
+            githubLink='https://github.com/Xlr8th/react_app'
+            siteLink='https://xlr8th.github.io/react_app/' 
             />
           </div>
 
           <div className="col">
             <Project
-            title='Spink Blog'
+            title='Hazel&Chestnut Blog'
             mainText='A blog site that offers information in various categories.'
-            smallText='Next + MUI' 
+            smallText='Nextjs + Bootstrap'
+            githubLink='https://github.com/Xlr8th/Hazel-Chestnut'
+            siteLink='https://hazel-chestnut.vercel.app/'
             />
           </div>
           <div className="col">
             <Project
-            title='GoldenLand'
-            mainText='A real estate website'
-            smallText='Html + Css + Javascript' 
+            title='Springs of Life'
+            mainText='A Mission Organization website'
+            smallText='Html + Css + Javascript'
+            githubLink='https://github.com/Xlr8th/SpringsOfLifeWebsite'
+            siteLink='https://solmissions.org/'
             />
           </div>
 
@@ -185,23 +203,29 @@ export default function Home() {
 
           <div className="col extra-project">
             <Project
-            title='Spink-Learn'
-            mainText='A Learning Management System'
-            smallText='React + Styled Components' 
+            title='St.George'
+            mainText='A Real Estate website'
+            smallText='Html + Bootstrap + Javascript'
+            githubLink='https://github.com/Xlr8th/real-estate'
+            siteLink='https://xlr8th.github.io/real-estate/'
             />
           </div> 
           <div className="col extra-project">
             <Project
             title='Portfolio'
             mainText='My portfolio website which contains my projects and other information about me'
-            smallText='React + MUI' 
+            smallText='Html + css + javascript'
+            githubLink='https://github.com/Xlr8th/portfolio-website'
+            siteLink='https://xlr8th.github.io/portfolio-website/'
             />
           </div> 
           <div className="col extra-project">
             <Project
             title='Portfolio V2'
             mainText='My portfolio website which contains my projects and other information about me'
-            smallText='React + MUI + Styled Components' 
+            smallText='Nextjs + Bootstrap'
+            githubLink='https://github.com/Xlr8th/NextJs-Project'
+            siteLink='https://next-js-project-er5c.vercel.app/'
             />
           </div>
 
