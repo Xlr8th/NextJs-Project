@@ -81,7 +81,7 @@ export default function Home() {
     </section>
 
     <section id='Skills' className='pt-5'>
-      <div className='container mt-5'data-aos="fade-up" data-aos-delay="500">
+      <div className='container mt-5'data-aos="fade-up" >
       <div className="row mb-4 pt-5 px-lg-5">
         <div className="col-12">
           <Wrapper 

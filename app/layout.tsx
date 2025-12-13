@@ -37,7 +37,7 @@ const RootLayout = ({ children }: {children: ReactNode}) => {
           <header>
             <div className='menu order-md-2 ms-sm-3 me-md-3'>
               <input type="checkbox" id='toggle' className='checkbox-toggle' />
-              <label htmlFor="toggle" className='hamburger'>
+              <label htmlFor="toggle" className='hamburger ms-3'>
                 <span></span>
                 <span></span>
                 <span></span>
@@ -54,7 +54,7 @@ const RootLayout = ({ children }: {children: ReactNode}) => {
               </nav>
             </div>
 
-            <div className='order-md-1 me-sm-3 ms-md-3'>
+            <div className='order-md-1 me-3 ms-md-3'>
               <Link href='/' className='text-decoration-none'><h1 className='logo'>GEORIGE</h1></Link>
             </div>
           
